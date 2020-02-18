@@ -1,0 +1,48 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+}
+.AppHeader-inner{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+}
+.SearchBar-tool{
+    width: 326px;
+    height: 26px;
+    outline: none;
+}
+.SearchBar-button{
+    width: 58px;
+    height: 30px;
+    margin-left: 16px;
+    background-color: #0084ff;
+    color: #fff;
+    line-height: 28px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+.SearchBar-button:hover{
+    background-color: rgb(0, 119, 230);
+    border-color: rgb(0, 119, 230);
+}
+.AppHeader-Tabs{
+    display: flex;
+    margin: 0 23px;
+}
+.Tabs-item{
+    padding: 0 17px;
+}
+.Header{
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    /*背景绘制区域*/
+    background-clip: content-box;
+}
