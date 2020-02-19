@@ -6,9 +6,11 @@ class QuizForm extends Component {
         this.state={
             titleValue:'',
             contentValue:'',
+            commentCount: 0,
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.SendCancel = this.SendCancel.bind(this);
+        this.SendConfirm = this.SendConfirm.bind(this);
     }
     handleInputChange(e){
         // 获取触发事件元素
@@ -28,6 +30,15 @@ class QuizForm extends Component {
             contentValue:'',
         })
         e.preventDefault();
+    }
+    SendConfirm(e){
+        const { addOneQuiz } = this.props;
+        addOneQuiz(this.state);
+        this.setState({
+            titleValue:'',
+            contentValue:'',
+        })
+        e.preventDefault(); 
     }
     render() { 
         return (

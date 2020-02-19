@@ -4,7 +4,8 @@ class Header extends Component {
     constructor(props){
         super(props);
         this.state = {
-            value:''
+            value:'',
+            display: true,
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,7 +16,11 @@ class Header extends Component {
         })
     }
     handleSubmit(e){
-        alert('我搜索的是:'+this.state.value);
+        const { isDisPlay } = this.props;
+        isDisPlay(this.state.display);
+        this.setState({
+            display: !this.state.display
+        });
         e.preventDefault();
     }
     render() { 
@@ -33,7 +38,7 @@ class Header extends Component {
                     <div className="SearchBar">
                         <form onSubmit={this.handleSubmit}>
                             <input type="text" className="SearchBar-tool" onChange={this.handleChange}/>
-                            <input type="submit" className="SearchBar-button" />
+                            <input type="submit" className="SearchBar-button" value="提问" />
                         </form>
                     </div>
                     <div className="AppHeader-userInfo"></div>
